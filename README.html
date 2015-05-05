@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="setupprocess">Setup Process</h1>
+
+<p>This is the setup file for the base Bootstrap theme
+As of the time of this writing, the included components are at the following versions:</p>
+
+<p>Bootstrap: 3.3.2
+Fontawesome: 4.3.0</p>
+
+<h1 id="steps">Steps</h1>
+
+<h1 id="ifupdatingthebsorfalibrariesthenmakesurethatthecustomizationsnotedbelow">If updating the BS or FA libraries, then make sure that the customizations noted below</h1>
+
+<ol>
+<li>In ./start.sh, update the portal ID and the API Key.</li>
+<li>Open Terminal and browse to this folder, and execute &#8220;sh start.sh&#8221;</li>
+<li>Ensure that the initial files upload properly to the Hubspot Portal.</li>
+<li>Using the output from the fontawesome file uploads, edit the &#8220;@fa-font-path&#8221;
+variable in ./less/fontawesome/variables.less</li>
+<li>Using that same base path, update the &#8220;@img-path&#8221; in ./less/styles.less</li>
+</ol>
+
+</body>
+</html>
