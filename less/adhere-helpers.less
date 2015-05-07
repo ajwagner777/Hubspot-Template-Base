@@ -1,6 +1,8 @@
 // ========= VARIABLES
 @transparency: 0.8;
 @transition-speed: 200ms;
+@img-path:  "../img";
+@font-path: "../fonts";
 
 // ========= COLORS
 
@@ -81,6 +83,16 @@ a{transition:color @transition-speed;color:@gray;
 }
 
 hr{border-top-color:@gray-dark;}
+
+// ========= PANELS
+.panel{float:left;width:100%;}
+.image-panel{background-position:center center;background-attachment:fixed;background-size:cover;
+	@media(max-width:@screen-sm){background-attachment:scroll;}
+}
+.white-panel{background:@white;}
+.black-panel{background:@black;}
+.gray-panel{background:@gray;}
+.light-gray-panel{background:@gray-lighter;}
 
 // ========= OFF CANVAS
 .off-canvas{position:fixed;width:240px;right:-250px;top:0;bottom:0;background:@gray;display:block;z-index:1010;.transition(right @transition-speed ease);box-shadow:0 0 15px rgba(0,0,0,0.5),inset 10px 25px 40px rgba(0,0,0,0.2);
