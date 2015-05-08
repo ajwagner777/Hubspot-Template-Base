@@ -95,14 +95,17 @@ hr{border-top-color:@gray-dark;}
 .light-gray-panel{background:@gray-lighter;}
 
 // ========= OFF CANVAS
+body.off-canvas-expanded{overflow:hidden;}
 .off-canvas{position:fixed;width:240px;right:-250px;top:0;bottom:0;background:@gray;display:block;z-index:1010;.transition(right @transition-speed ease);box-shadow:0 0 15px rgba(0,0,0,0.5),inset 10px 25px 40px rgba(0,0,0,0.2);
 	ul{padding:0;margin:0;
-		li{list-style:none;display:block}
+		li{list-style:none;display:block;position:relative;}
 		a{display:block;width:100%;padding:5px @gutter/2;text-transform:uppercase;color:@white;background:@clear;.transition(all @transition-speed ease);
 			&:hover{background:@gray-lighter;.transition(all @transition-speed ease);color:@gray-dark}
 		}
 		li a{padding:0 0 0 30px;text-transform:none;}
 	}
+	&>div>ul>li>ul{display:none;}
+	.expand{position: absolute;top:0;right:0;color:@gray-dark;width:45px;text-align:center;font-size:1.5em;line-height:1.5em;border-left:1px dashed gray;cursor:pointer;}
 	
 	&.off-canvas-expanded{right:0;.transition(right @transition-speed ease);
 		.off-canvas-toggle{box-shadow: 0 0 15px rgba(0,0,0,0.15);}
